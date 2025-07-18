@@ -16,3 +16,7 @@ action = input("Ведите действие :")
 num2 = int(input("Ведите второе число:"))
 print(plush_mach(num1, action, num2))
         
+
+
+
+        
