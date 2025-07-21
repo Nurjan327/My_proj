@@ -30,29 +30,65 @@
 
 
 
-def plush_mach(num1, action, num2):
-    if action == "+":
-        return num1 + num2
-    elif action == "-":
-        return num1 + num2
-    elif action == "*":
-        return num1 * num2
-    elif action == "/":
-        return num1 / num2
+# def plush_mach(num1, action, num2):
+#     if action == "+":
+#         return num1 + num2
+#     elif action == "-":
+#         return num1 + num2
+#     elif action == "*":
+#         return num1 * num2
+#     elif action == "/":
+#         return num1 / num2
     
     
     
-num1 = int(input("Ведите первое число:"))
-action = input("Ведите действие :")
-num2 = int(input("Ведите второе число:"))
-print(plush_mach(num1, action, num2))
-try: 
-    x = "piush_mach"
-except ValueError:
-    print("введите число а не букву")
-except ZeroDivisionError:
-    print("на ноль не делится")
-else:
-    print("Ошибок небыло")
-finally:
-    print("этот код выполняется всегда")
+# num1 = int(input("Ведите первое число:"))
+# action = input("Ведите действие :")
+# num2 = int(input("Ведите второе число:"))
+# print(plush_mach(num1, action, num2))
+# try: 
+#     x = "piush_mach"
+# except ValueError:
+#     print("введите число а не букву")
+# except ZeroDivisionError:
+#     print("на ноль не делится")
+# else:
+#     print("Ошибок небыло")
+# finally:
+#     print("этот код выполняется всегда")
+
+
+
+# file = open("text.txt", "w")
+# file.write("Бекнден самый лучший")
+# file.close()
+
+# file = open("text.txt", "r")
+# content = file.read()
+# print(content)
+# file.close()
+
+# with open("Nurjan.txt", 'w') as f:
+#     f.write("салам Нуржан\n")
+#     f.write("это вторая строка\n")
+
+# with open("Nurjan.txt", 'r') as f:
+#     data = f.read()
+#     print(data)
+
+
+
+
+
+file_name = input("Введите имя файла (например, notes.txt): ")
+
+with open(file_name, "w") as f:
+    for i in range(3):
+        line = input(f"Введите строку {i + 1}: ")
+        f.write(line + "n")
+
+print("n Содержимое файла:")
+with open(file_name, "r") as f:
+    for line in f:
+        print(line.strip())
+
