@@ -32,17 +32,23 @@
 
 
 
-class Human:
-    def __init__(self, first_name, last_name, height):
-        self.first_name = first_name
-        self.last_name = last_name
+class Person:
+    def __init__(self, name, surname, height):
+        self.name = name
+        self.surname = surname
         self.height = height
 
     def __str__(self):
-        return f"Имя: {self.first_name}, Фамилия: {self.last_name}, Рост: {self.height} см"
+        return f"{self.surname} {self.name}, рост: {self.height} см"
 
 
-person = Human("Иван", "Иванович", 176)
+class Student(Person):
+    def __init__(self, name, surname, height, class_level):
+        super().__init__(name, surname, height)
+        self.class_level = class_level
 
+    def __str__(self):
+        return f"{self.surname} {self.name}, рост: {self.height} см, учится в классе: {self.class_level} 10b"
 
-print(person)
+my_student_person = Student("Иван", "Петров", 180, "10Б")
+print(my_student_person)

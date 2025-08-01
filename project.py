@@ -80,15 +80,26 @@
 
 
 
-file_name = input("Введите имя файла (например, notes.txt): ")
+# file_name = input("Введите имя файла (например, notes.txt): ")
 
-with open(file_name, "w") as f:
-    for i in range(3):
-        line = input(f"Введите строку {i + 1}: ")
-        f.write(line + "n")
+# with open(file_name, "w") as f:
+#     for i in range(3):
+#         line = input(f"Введите строку {i + 1}: ")
+#         f.write(line + "n")
 
-print("n Содержимое файла:")
-with open(file_name, "r") as f:
-    for line in f:
-        print(line.strip())
+# print("n Файл:")
+# with open(file_name, "r") as f:
+#     for line in f:
+#         print(line.strip())
 
+class Dog:
+    def init(self, name, age, breed):  
+        self.name = name
+        self.age = age
+        self.breed = breed
+
+    def bark(self):
+        print(f"{self.name} говорит гав!")
+
+my_dog = Dog("Шарик", 3, "Хаски")
+my_dog.bark()
